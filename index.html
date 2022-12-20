@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <script type="text/javascript" async src="read-notifications.js"></script>
+  
+  <title>Frontend Mentor | Notifications page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    
+    body{
+      
+      font-size: 16px;
+      padding-left: 30%;
+
+    }
+    html{
+      box-sizing: border-box;
+    }
+    *, *:before, *:after{
+      box-sizing: inherit;
+    }
+    .container{
+      width: 600px;
+      height: 700px;
+      
+      padding: 10px;
+    }
+    img{
+      display: inline-block;
+      width: 12%; 
+      height: 90%;
+      padding: 15px;
+    }
+    .p1not{
+      display: inline-block;
+      position: absolute;
+      top: auto;
+      /*vertical-align: middle;
+      line-height: normal;
+      align-items: center; */
+      
+    }
+    .num{
+      width: 20px;
+      height: 20px;
+      background-color: blue;
+      color: white;
+      border-radius: 5px;
+      font-weight: 900;
+      text-align: center;
+    }
+    .dot{
+     
+      height: 8px;
+      width: 8px;
+      background-color: red;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .time1{
+      position: absolute;
+      top: 18px;
+      left: 70px;
+      opacity: 0.6;
+      font-size: 0.9rem;
+      margin-bottom: 5px;
+    }
+    .unread{
+      background-color: #e5effa !important;
+    }
+
+    .p-message{
+      position: absolute;
+      top: 35px;
+      left: 70px;
+      opacity: 0.8;
+      font-size: 0.9rem;
+      border: 1px solid gray;
+    
+    }
+   
+   button{
+    background-color: white;
+    border: none;
+
+   }
+   #mark-as:hover{
+    cursor: pointer;
+   }
+   
+    .notifications, .num,  #mark-as{
+      display: inline-block;
+    }
+   
+
+
+    #mark-as{
+      margin-left: 320px;
+    }
+    .first-not,.second-not,.third-not{
+      position: relative;
+      width: 100%;
+      height: 12%;
+      /* background-color: #f7fafd; */
+      margin-bottom: 5px ;
+    }
+    .fourth-not,.fifth-not,.sixth-not,.seventh-not{
+      position: relative;
+      width: 100%;
+      height: auto;
+      margin-bottom: 5px ;
+    }
+    @media only screen 
+    and (max-width: 600px)
+    and (min-width: 400px)
+    {
+      h3{
+        color: red;
+      }
+     
+    }
+
+   
+    
+  </style>
+</head>
+<body>
+
+  <div class="container">
+  <header>
+    <div class="top-section">
+      <div class="notifications">
+        <h3>Notifications</h3>
+      </div>
+      <span id="notifies"></span>
+      <span class="num">3</span>
+       
+   
+      <span id="mark-as">
+        Mark all as read
+      </span>
+
+    </div>
+  </header>
+  <main>
+    <div class="first-not unread">
+    
+        <img src="./assets/images/avatar-mark-webber.webp" alt="mark-image">
+        <p class="p1not"><b>Mark Webber</b> reacted to your recent post <b>My first tournament today!</b></p>
+        <div class="dot"></div>
+        <p class="time1">1m ago</p>
+     
+    </div>
+
+    <div class="second-not unread">
+      <img src="assets/images/avatar-angela-gray.webp" alt="angela-image">
+      <p class="p1not"><b>Angela Gray</b> followed you</p>
+      <span class="dot"></span>
+      <p class="time1">5m ago</p>
+      
+    </div>  
+
+    <div class="third-not unread">
+      <img src="assets/images/avatar-jacob-thompson.webp" alt="jacob-image">
+      <p class="p1not"><b>Jacob Thompson</b> has joined your group Chess Club</p>
+      <span class="dot"></span>
+      <p class="time1">1 day ago</p>
+    </div>
+
+    <div class="fourth-not">
+      <img src="assets/images/avatar-rizky-hasanuddin.webp" alt="jacob-image">
+      <p class="p1not"><b>Rizky Hasanuddin</b> sent you a private message</p>
+      <p class="time1">5 days ago</p>
+     
+        <p class="p-message">Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
+          I'm already having lots of fun and improving my game.</p>
+      
+    </div>
+
+    <div class="fifth-not">
+      <img src="assets/images/avatar-kimberly-smith.webp" alt="kim-image">
+      <p class="p1not"><b>Kimberly Smith</b> commented on your picture</p>
+      <p class="time1">1 week ago</p>
+    </div>
+
+    <div class="sixth-not">
+      <img src="assets/images/avatar-nathan-peterson.webp" alt="nathan-image">
+      <p class="p1not"><b>Nathan Peterson</b> reacted to your recent post 5 end-game strategies to increase your win rate</p>
+      <p class="time1">2 weeks ago</p>
+    </div>
+
+    <div class="seventh-not">
+      <img src="assets/images/avatar-anna-kim.webp" alt="anna-image">
+      <p class="p1not"><b>Anna Kim</b> left the group Chess Club</p>
+      <p class="time1">2 weeks ago</p>
+    </div>
+
+  </main>
+  </div>
+
+ 
+</body>
+</html>
